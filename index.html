@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abdelaziz Mohamed | Cybersecurity Portfolio</title>
+    <meta name="description" content="Portfolio of Abdelaziz Abdelmonem Mohamed, a junior penetration tester and ethical hacker focused on web application and network security.">
+    <title>Abdelaziz Mohamed | Penetration Testing Portfolio</title>
     <style>
         :root {
             --bg-color: #0d1117;
@@ -27,6 +28,22 @@
             background-color: var(--bg-color);
             color: var(--text-primary);
             line-height: 1.6;
+        }
+
+        .skip-link {
+            position: absolute;
+            left: -9999px;
+            top: 10px;
+            z-index: 10;
+            padding: 8px 14px;
+            background: var(--accent);
+            color: #0d1117;
+            border-radius: 6px;
+            font-weight: 600;
+        }
+
+        .skip-link:focus {
+            left: 10px;
         }
 
         a {
@@ -212,6 +229,7 @@
 </head>
 <body>
 
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <div class="container">
         <!-- Header Section -->
         <header>
@@ -220,30 +238,31 @@
             <p style="color: var(--text-secondary);">Giza, Egypt</p>
             
             <div class="social-links">
-                <a href="mailto:abdelazizmohmed68@gmail.com" target="_blank">Email Me</a>
-                <a href="https://www.linkedin.com/in/abdelaziz-mohamed5" target="_blank">LinkedIn</a>
-                <a href="https://github.com/zezo7amaad" target="_blank">GitHub</a>
+                <a href="mailto:abdelazizmohmed68@gmail.com">Email Me</a>
+                <a href="https://www.linkedin.com/in/abdelaziz-mohamed5" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://github.com/zezo7amaad" target="_blank" rel="noopener noreferrer">GitHub</a>
             </div>
         </header>
 
         <!-- About Section -->
-        <section>
-            <h3>About Me</h3>
+        <main id="main-content">
+        <section aria-labelledby="about-heading">
+            <h3 id="about-heading">About Me</h3>
             <p class="about-text">
-                Dedicated Junior Penetration Tester and Ethical Hacker with a strong foundation in network security and ethical hacking. 
-                Certified in CEH, eWPTX, and eMAPT, and currently pursuing a B.S. in Cybersecurity at Arab Open University. 
-                Proven hands-on experience in Web Application Penetration Testing and practical network security operations, 
-                specializing in identifying vulnerabilities and securing digital assets.
+                Dedicated Junior Penetration Tester and Ethical Hacker with a strong foundation in network security and ethical hacking.
+                Certified in CEH, eWPTX, and eMAPT, and pursuing a B.S. in Cybersecurity at Arab Open University.
+                Hands-on experience in web application penetration testing and practical network security operations,
+                with a focus on identifying vulnerabilities and helping teams secure digital assets.
             </p>
         </section>
 
         <!-- Projects Section -->
-        <section>
-            <h3>Featured Project</h3>
+        <section aria-labelledby="projects-heading">
+            <h3 id="projects-heading">Featured Project</h3>
             <div class="card project-card">
                 <h4>Egyxos Scanner | Automated Security Reconnaissance & Vulnerability Tool</h4>
                 <div class="meta">
-                    <a href="https://github.com/zezo7amaad/Egyxos-Scanner" target="_blank">View on GitHub ↗</a>
+                    <a href="https://github.com/zezo7amaad/Egyxos-Scanner" target="_blank" rel="noopener noreferrer">View on GitHub ↗</a>
                 </div>
                 <ul>
                     <li>Architected a custom Python-based automation tool to streamline the security assessment lifecycle, integrating subdomain enumeration with automated vulnerability discovery.</li>
@@ -259,11 +278,11 @@
         </section>
 
         <!-- Experience Section -->
-        <section>
-            <h3>Experience & Internships</h3>
+        <section aria-labelledby="experience-heading">
+            <h3 id="experience-heading">Experience & Training</h3>
             <div class="card-grid">
                 <div class="card">
-                    <h4>Network Security</h4>
+                    <h4>Network Security Trainee</h4>
                     <div class="meta">National Telecommunication Institute (NTI) | Sep 2026 - Present</div>
                     <ul>
                         <li>Conducted hands-on vulnerability assessments on simulated enterprise network environments.</li>
@@ -273,7 +292,7 @@
                 </div>
 
                 <div class="card">
-                    <h4>Web App Penetration Tester</h4>
+                    <h4>Web Application Penetration Testing Trainee</h4>
                     <div class="meta">Arab Open University (AOU) | Dec 2024 - May 2025</div>
                     <ul>
                         <li>Performed security assessments to identify SQL Injection, XSS, and Broken Authentication.</li>
@@ -285,8 +304,8 @@
         </section>
 
         <!-- Skills Section -->
-        <section>
-            <h3>Technical Skills</h3>
+        <section aria-labelledby="skills-heading">
+            <h3 id="skills-heading">Technical Skills</h3>
             <div class="skills-container">
                 <span class="skill-tag">Burp Suite</span>
                 <span class="skill-tag">Nmap</span>
@@ -304,14 +323,15 @@
                 <span class="skill-tag">Network Security</span>
                 <span class="skill-tag">TCP/IP & VPNs</span>
                 <span class="skill-tag">Firewall Configuration</span>
+                <span class="skill-tag">Android Security</span>
             </div>
         </section>
 
         <!-- Certifications & Education Section -->
-        <section>
+        <section aria-labelledby="credentials-heading">
             <div class="card-grid">
                 <div>
-                    <h3>Certifications</h3>
+                    <h3 id="credentials-heading">Certifications</h3>
                     <ul class="cert-list">
                         <li>Certified Ethical Hacker (CEH) - EC-Council</li>
                         <li>eLearnSecurity Web App Penetration Tester eXtreme (eWPTX)</li>
@@ -319,7 +339,7 @@
                     </ul>
                 </div>
                 <div>
-                    <h3>Education</h3>
+                    <h3 id="education-heading">Education</h3>
                     <div class="card" style="margin-bottom: 0;">
                         <h4>B.S. in Cybersecurity</h4>
                         <div class="meta">Arab Open University | 2023 - 2027</div>
@@ -332,6 +352,7 @@
                 </div>
             </div>
         </section>
+        </main>
 
         <!-- Footer -->
         <footer>
