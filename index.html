@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdelaziz Mohamed | Cybersecurity Portfolio</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;600&display=swap');
+
+        :root {
+            --bg-color: #0d1117;
+            --card-bg: #161b22;
+            --text-primary: #c9d1d9;
+            --text-secondary: #8b949e;
+            --accent-color: #58a6ff;
+            --border-color: #30363d;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--card-bg);
+            border-bottom: 1px solid var(--border-color);
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            color: #ffffff;
+            letter-spacing: -0.5px;
+        }
+
+        header h2 {
+            font-family: 'Fira Code', monospace;
+            font-size: 1.2rem;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            font-size: 0.95rem;
+        }
+
+        .contact-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-links a:hover {
+            color: var(--accent-color);
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 50px 20px;
+        }
+
+        section {
+            margin-bottom: 50px;
+        }
+
+        h3.section-title {
+            font-size: 1.5rem;
+            color: #ffffff;
+            margin-bottom: 25px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 25px;
+            transition: border-color 0.3s, transform 0.3s;
+        }
+
+        .card:hover {
+            border-color: var(--accent-color);
+            transform: translateY(-2px);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        .card-subtitle {
+            color: var(--accent-color);
+            font-size: 1rem;
+            margin-top: 5px;
+            font-weight: 500;
+        }
+
+        .card-date {
+            font-family: 'Fira Code', monospace;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            background: rgba(255, 255, 255, 0.05);
+            padding: 4px 10px;
+            border-radius: 4px;
+        }
+
+        ul.task-list {
+            list-style-type: none;
+            margin-top: 15px;
+        }
+
+        ul.task-list li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 12px;
+            color: var(--text-secondary);
+        }
+
+        ul.task-list li::before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-box {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .skill-box h4 {
+            color: #ffffff;
+            margin-bottom: 15px;
+            font-size: 1.05rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 8px;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag {
+            background-color: rgba(88, 166, 255, 0.1);
+            color: var(--accent-color);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-family: 'Fira Code', monospace;
+            border: 1px solid rgba(88, 166, 255, 0.2);
+        }
+
+        .github-link {
+            display: inline-block;
+            margin-top: 15px;
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .github-link:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.2rem; }
+            .card-header { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Abdelaziz Abdelmonem Mohamed</h1>
+        <h2>Junior Penetration Tester | Ethical Hacker</h2>
+        <div class="contact-links">
+            <a href="mailto:abdelazizmohmed68@gmail.com">abdelazizmohmed68@gmail.com</a>
+            <a href="https://www.linkedin.com/in/abdelaziz-mohamed5" target="_blank">LinkedIn</a>
+            <a href="https://github.com/zezo7amaad" target="_blank">GitHub</a>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <section>
+            <h3 class="section-title">Featured Projects</h3>
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <div class="card-title">Egyxos Scanner</div>
+                        <div class="card-subtitle">Automated Security Reconnaissance & Vulnerability Tool</div>
+                    </div>
+                </div>
+                <ul class="task-list">
+                    <li>Architected a custom Python-based automation tool to streamline the security assessment lifecycle, integrating subdomain enumeration with automated vulnerability discovery.</li>
+                    <li>Engineered modules to detect common web-based vulnerabilities (SQLI, SSRF, XSS) across large attack surfaces, significantly reducing manual reconnaissance time by up to 40% across target domains.</li>
+                    <li>Implemented efficient data parsing to generate actionable vulnerability reports, facilitating rapid triage and remediation for bug bounty engagements.</li>
+                </ul>
+                <a href="https://github.com/zezo7amaad/Egyxos-Scanner" class="github-link" target="_blank">View Repository on GitHub &rarr;</a>
+            </div>
+        </section>
+
+        <section>
+            <h3 class="section-title">Licenses & Certifications</h3>
+            <div class="card">
+                <ul class="task-list">
+                    <li><strong>CEH:</strong> Certified Ethical Hacker - EC-Council</li>
+                    <li><strong>eWPTX:</strong> eLearnSecurity Web Application Penetration Tester eXtreme</li>
+                    <li><strong>eMAPT:</strong> eLearnSecurity Mobile Application Penetration Tester</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h3 class="section-title">Technical Skills</h3>
+            <div class="skills-grid">
+                <div class="skill-box">
+                    <h4>Security Tools</h4>
+                    <div class="tags">
+                        <span class="tag">Burp Suite</span>
+                        <span class="tag">Nmap</span>
+                        <span class="tag">Metasploit</span>
+                        <span class="tag">Wireshark</span>
+                        <span class="tag">SQLmap</span>
+                        <span class="tag">Nessus</span>
+                        <span class="tag">Nuclei</span>
+                        <span class="tag">Subfinder</span>
+                    </div>
+                </div>
+                <div class="skill-box">
+                    <h4>Core Competencies</h4>
+                    <div class="tags">
+                        <span class="tag">OWASP Top 10</span>
+                        <span class="tag">Network Security</span>
+                        <span class="tag">Vulnerability Assessment</span>
+                        <span class="tag">Ethical Hacking</span>
+                        <span class="tag">Linux (Kali)</span>
+                    </div>
+                </div>
+                <div class="skill-box">
+                    <h4>Networking</h4>
+                    <div class="tags">
+                        <span class="tag">Routing & Switching</span>
+                        <span class="tag">TCP/IP</span>
+                        <span class="tag">VPNs</span>
+                        <span class="tag">Firewall Configuration</span>
+                    </div>
+                </div>
+                <div class="skill-box">
+                    <h4>Programming</h4>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Java</span>
+                        <span class="tag">Bash</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h3 class="section-title">Experience & Internships</h3>
+            
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <div class="card-title">Network Security Trainee</div>
+                        <div class="card-subtitle">National Telecommunication Institute (NTI)</div>
+                    </div>
+                    <div class="card-date">Sep 2026 - Oct 2026</div>
+                </div>
+                <ul class="task-list">
+                    <li>Conducted hands-on vulnerability assessments on simulated enterprise network environments, identifying misconfigurations and weaknesses across routers, switches, and endpoint systems.</li>
+                    <li>Configured and tested firewall rule sets and access control policies to enforce network segmentation and restrict unauthorized traffic in alignment with security best practices.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <div class="card-title">Web Application Penetration Tester Trainee</div>
+                        <div class="card-subtitle">Arab Open University (AOU)</div>
+                    </div>
+                    <div class="card-date">Dec 2024 - May 2025</div>
+                </div>
+                <ul class="task-list">
+                    <li>Performed security assessments on web applications to identify vulnerabilities including SQL Injection, XSS, and Broken Authentication.</li>
+                    <li>Utilized Burp Suite and manual testing techniques to bypass security controls and document findings.</li>
+                    <li>Drafted comprehensive technical remediation reports addressing OWASP Top 10 vulnerabilities (including SQLI, XSS, and IDOR) for development teams.</li>
+                </ul>
+            </div>
+        </section>
+
+    </div>
+</body>
+</html>
