@@ -1,276 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abdelaziz Mohamed | Junior Penetration Tester</title>
-    <style>
-        :root {
-            --bg-main: #0d1117;
-            --bg-card: #161b22;
-            --text-main: #c9d1d9;
-            --text-muted: #8b949e;
-            --accent: #58a6ff;
-            --border: #30363d;
-        }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-            background-color: var(--bg-main);
-            color: var(--text-main);
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-        header {
-            text-align: center;
-            margin-bottom: 40px;
-            padding-bottom: 30px;
-            border-bottom: 1px solid var(--border);
-        }
-        h1 { color: var(--accent); font-size: 2.5rem; margin-bottom: 5px; }
-        h2 { color: var(--text-main); font-size: 1.4rem; font-weight: 500; margin-top: 0; }
-        h3 { color: var(--accent); margin-top: 0; margin-bottom: 5px; font-size: 1.25rem; }
-        p { color: var(--text-muted); margin-bottom: 15px; text-align: justify; }
-        
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-top: 20px;
-        }
-        .contact-info a {
-            color: var(--accent);
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.2s;
-        }
-        .contact-info a:hover { color: #79c0ff; text-decoration: underline; }
-        .contact-info span { color: var(--text-muted); }
-        
-        .section-title {
-            font-size: 1.4rem;
-            color: var(--text-main);
-            border-bottom: 2px solid var(--border);
-            padding-bottom: 5px;
-            margin-top: 40px;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        
-        .card {
-            background-color: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 25px;
-            margin-bottom: 20px;
-            transition: transform 0.2s, border-color 0.2s;
-        }
-        .card:hover {
-            border-color: var(--accent);
-            transform: translateY(-2px);
-        }
-        .card-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            flex-wrap: wrap;
-            margin-bottom: 10px;
-        }
-        .date {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            font-family: monospace;
-        }
-        
-        ul { margin-top: 10px; padding-left: 20px; color: var(--text-muted); }
-        li { margin-bottom: 8px; }
-        
-        .skills-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-        @media (max-width: 600px) {
-            .skills-grid { grid-template-columns: 1fr; }
-            .card-header { flex-direction: column; }
-        }
-        
-        .skill-category {
-            background-color: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 20px;
-        }
-        .skill-category h4 {
-            color: var(--text-main);
-            margin-top: 0;
-            margin-bottom: 15px;
-            border-bottom: 1px solid var(--border);
-            padding-bottom: 5px;
-        }
-        .skill-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        .skill-tag {
-            background-color: rgba(88, 166, 255, 0.1);
-            color: var(--accent);
-            border: 1px solid rgba(88, 166, 255, 0.3);
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-family: monospace;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abdelaziz Mohamed | Portfolio</title>
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        line-height: 1.4;
+        font-size: 11pt;
+        background-color: #0d1117; 
+        color: #c9d1d9; 
+        margin: 0;
+        padding: 40px 20px;
+    }
+    .container {
+        max-width: 850px;
+        margin: 0 auto;
+    }
+    a {
+        color: #c9d1d9;
+        text-decoration: underline; 
+    }
+    a:hover {
+        color: #ffffff;
+    }
+    h1 {
+        font-size: 22pt;
+        text-align: center;
+        color: #ffffff;
+        margin-top: 0;
+        margin-bottom: 5px;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+    .subtitle {
+        text-align: center;
+        font-size: 12pt;
+        font-weight: bold;
+        color: #ffffff;
+        margin-bottom: 10px;
+    }
+    .contact-info {
+        text-align: center;
+        font-size: 10pt; 
+        color: #c9d1d9;
+        margin-bottom: 30px;
+    }
+    h2 {
+        font-size: 13pt;
+        color: #ffffff;
+        text-transform: uppercase;
+        border-bottom: 1px solid #30363d;
+        padding-bottom: 4px;
+        margin-top: 25px;
+        margin-bottom: 10px;
+    }
+    p {
+        margin-bottom: 10px;
+        text-align: justify;
+    }
+    .job-header {
+        font-weight: bold;
+        font-size: 11pt;
+        color: #ffffff;
+    }
+    .date-right {
+        float: right;
+        font-weight: normal;
+        color: #8b949e;
+        font-size: 10pt;
+    }
+    .clear {
+        clear: both;
+    }
+    ul {
+        margin-top: 5px;
+        margin-bottom: 15px;
+        padding-left: 20px;
+    }
+    li {
+        margin-bottom: 6px;
+    }
+</style>
 </head>
 <body>
+
     <div class="container">
-        <header>
-            <h1>Abdelaziz Abdelmonem Mohamed</h1>
-            <h2>Junior Penetration Tester | Ethical Hacker</h2>
-            <div class="contact-info">
-                <span>Giza, Egypt</span>
-                <span>+201026123287</span>
-                <a href="mailto:abdelazizmohmed68@gmail.com">abdelazizmohmed68@gmail.com</a>
-                <a href="https://zezo7amaad.github.io/Portfolio/" target="_blank">Portfolio</a>
-                <a href="https://www.linkedin.com/in/abdelaziz-mohamed5" target="_blank">LinkedIn</a>
-                <a href="https://github.com/zezo7amaad" target="_blank">GitHub</a>
-            </div>
-        </header>
-
-        <section>
-            <h3 class="section-title">Objective</h3>
-            <p>CEH, eWPTX, and eMAPT certified Junior Penetration Tester and Ethical Hacker with practical experience in web application and network security assessments. Holding dual B.S. degrees in Cyber Security. Adept at leveraging tools like Burp Suite, Nmap, Metasploit, Wireshark, and custom Python scripts for manual testing, automated reconnaissance, and providing actionable remediation to secure enterprise digital assets.</p>
-        </section>
-
-        <section>
-            <h3 class="section-title">Internships</h3>
-            
-            <div class="card">
-                <div class="card-header">
-                    <h3>Network Security Trainee | National Telecommunication Institute (NTI)</h3>
-                    <span class="date">Sep 2026 - Oct 2026</span>
-                </div>
-                <ul>
-                    <li>Conducted hands-on vulnerability assessments on simulated enterprise network environments, identifying misconfigurations and weaknesses across routers, switches, and endpoint systems.</li>
-                    <li>Configured and tested firewall rule sets and access control policies to enforce network segmentation and restrict unauthorized traffic in alignment with security best practices.</li>
-                    <li>Performed network traffic analysis using Wireshark and Nmap to detect anomalies, map attack surfaces, and support penetration testing exercises on internal infrastructure.</li>
-                </ul>
-            </div>
-
-            <div class="card">
-                <div class="card-header">
-                    <h3>Web Application Penetration Tester Trainee | Arab Open University (AOU)</h3>
-                    <span class="date">Dec 2024 - May 2025</span>
-                </div>
-                <ul>
-                    <li>Performed security assessments on web applications to identify vulnerabilities including SQL Injection, XSS, and Broken Authentication.</li>
-                    <li>Utilized Burp Suite and manual testing techniques to bypass security controls and document findings.</li>
-                    <li>Collaborated with the development team to provide remediation strategies based on the OWASP framework.</li>
-                    <li>Drafted comprehensive technical remediation reports addressing OWASP Top 10 vulnerabilities (including SQLI, XSS, and IDOR) for development teams.</li>
-                </ul>
-            </div>
-        </section>
-
-        <section>
-            <h3 class="section-title">Projects</h3>
-            <div class="card">
-                <div class="card-header">
-                    <h3>Egyxos Scanner | Automated Security Reconnaissance & Vulnerability Tool</h3>
-                    <a href="https://github.com/zezo7amaad/Egyxos-Scanner" target="_blank">View on GitHub</a>
-                </div>
-                <ul>
-                    <li>Architected a custom Python-based automation tool to streamline the security assessment lifecycle, integrating subdomain enumeration with automated vulnerability discovery.</li>
-                    <li>Engineered modules to detect common web-based vulnerabilities (SQLI, SSRF, XSS) across large attack surfaces, significantly reducing manual reconnaissance time by up to 40% across target domains.</li>
-                    <li>Implemented efficient data parsing to generate actionable vulnerability reports, facilitating rapid triage and remediation for bug bounty engagements.</li>
-                </ul>
-            </div>
-        </section>
-
-        <section>
-            <h3 class="section-title">Technical Skills</h3>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h4>Security Tools</h4>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Burp Suite</span>
-                        <span class="skill-tag">Nmap</span>
-                        <span class="skill-tag">Metasploit</span>
-                        <span class="skill-tag">Wireshark</span>
-                        <span class="skill-tag">SQLmap</span>
-                        <span class="skill-tag">Nessus</span>
-                        <span class="skill-tag">Nuclei</span>
-                        <span class="skill-tag">Subfinder</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h4>Programming & Scripting</h4>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">Java</span>
-                        <span class="skill-tag">Bash</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h4>Core Competencies</h4>
-                    <div class="skill-tags">
-                        <span class="skill-tag">OWASP Top 10</span>
-                        <span class="skill-tag">Network Security</span>
-                        <span class="skill-tag">Vulnerability Assessment</span>
-                        <span class="skill-tag">Ethical Hacking</span>
-                        <span class="skill-tag">Linux (Kali)</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h4>Networking</h4>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Routing & Switching</span>
-                        <span class="skill-tag">TCP/IP</span>
-                        <span class="skill-tag">VPNs</span>
-                        <span class="skill-tag">Firewall Configuration</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <h3 class="section-title">Certifications & Education</h3>
-            <div class="skills-grid">
-                <div class="card">
-                    <h3 style="margin-bottom:15px;">Certifications</h3>
-                    <ul>
-                        <li>Certified Ethical Hacker (CEH) - EC-Council</li>
-                        <li>eLearnSecurity Web Application Penetration Tester eXtreme (eWPTX)</li>
-                        <li>eLearnSecurity Mobile Application Penetration Tester (eMAPT)</li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <h3 style="margin-bottom:15px;">Education</h3>
-                    <p style="color:var(--text-main); font-weight:500;">Dual Bachelor of Science in Cyber Security</p>
-                    <ul>
-                        <li>The Open University - UK</li>
-                        <li>Arab Open University - Egypt</li>
-                    </ul>
-                    <span class="date">Expected Graduation: 2027</span>
-                </div>
-            </div>
-        </section>
+        <h1>Abdelaziz Abdelmonem Mohamed</h1>
+        <div class="subtitle">Junior Penetration Tester | Ethical Hacker</div>
         
-        <section>
-            <h3 class="section-title">Languages</h3>
-            <div class="card" style="display: flex; gap: 20px;">
-                <span class="skill-tag">Arabic: Native</span>
-                <span class="skill-tag">English: B2 - Professional Working Proficiency</span>
-            </div>
-        </section>
+        <div class="contact-info">
+            Giza, Egypt &bull; +201026123287 &bull; 
+            <a href="mailto:abdelazizmohmed68@gmail.com" style="text-decoration: none;">abdelazizmohmed68@gmail.com</a> &bull; 
+            <a href="https://www.linkedin.com/in/abdelaziz-mohamed5" target="_blank">LinkedIn</a> &bull; 
+            <a href="https://github.com/zezo7amaad" target="_blank">GitHub</a>
+        </div>
+
+        <h2>OBJECTIVE</h2>
+        <p>CEH, eWPTX, and eMAPT certified Junior Penetration Tester and Ethical Hacker with practical experience in web application and network security assessments. Holding dual B.S. degrees in Cyber Security. Adept at leveraging tools like Burp Suite, Nmap, Metasploit, Wireshark, and custom Python scripts for manual testing, automated reconnaissance, and providing actionable remediation to secure enterprise digital assets.</p>
+
+        <h2>INTERNSHIPS</h2>
+        <div class="job-header">
+            Network Security Trainee | National Telecommunication Institute (NTI)
+            <span class="date-right">Sep 2026 - Oct 2026</span>
+        </div>
+        <div class="clear"></div>
+        <ul>
+            <li>Conducted hands-on vulnerability assessments on simulated enterprise network environments, identifying misconfigurations and weaknesses across routers, switches, and endpoint systems.</li>
+            <li>Configured and tested firewall rule sets and access control policies to enforce network segmentation and restrict unauthorized traffic in alignment with security best practices.</li>
+            <li>Performed network traffic analysis using Wireshark and Nmap to detect anomalies, map attack surfaces, and support penetration testing exercises on internal infrastructure.</li>
+        </ul>
+
+        <div class="job-header">
+            Web Application Penetration Tester Trainee | Arab Open University (AOU)
+            <span class="date-right">Dec 2024 - May 2025</span>
+        </div>
+        <div class="clear"></div>
+        <ul>
+            <li>Performed security assessments on web applications to identify vulnerabilities including SQL Injection, XSS, and Broken Authentication.</li>
+            <li>Utilized Burp Suite and manual testing techniques to bypass security controls and document findings.</li>
+            <li>Collaborated with the development team to provide remediation strategies based on the OWASP framework.</li>
+            <li>Drafted comprehensive technical remediation reports addressing OWASP Top 10 vulnerabilities (including SQLI, XSS, and IDOR) for development teams.</li>
+        </ul>
+
+        <h2>PROJECTS</h2>
+        <div class="job-header">Egyxos Scanner | Automated Security Reconnaissance & Vulnerability Tool <span style="font-weight:normal;">| <a href="https://github.com/zezo7amaad/Egyxos-Scanner" target="_blank">View on GitHub</a></span></div>
+        <div class="clear"></div>
+        <ul>
+            <li>Architected a custom Python-based automation tool to streamline the security assessment lifecycle, integrating subdomain enumeration with automated vulnerability discovery.</li>
+            <li>Engineered modules to detect common web-based vulnerabilities (SQLI, SSRF, XSS) across large attack surfaces, significantly reducing manual reconnaissance time by up to 40% across target domains.</li>
+            <li>Implemented efficient data parsing to generate actionable vulnerability reports, facilitating rapid triage and remediation for bug bounty engagements.</li>
+        </ul>
+
+        <h2>TECHNICAL SKILLS</h2>
+        <ul>
+            <li><strong>Security Tools:</strong> Burp Suite, Nmap, Metasploit, Wireshark, SQLmap, Nessus, Nuclei, Subfinder.</li>
+            <li><strong>Programming & Scripting:</strong> Python, Java, Bash.</li>
+            <li><strong>Core Competencies:</strong> OWASP Top 10, Network Security, Vulnerability Assessment, Ethical Hacking, Linux (Kali).</li>
+            <li><strong>Networking:</strong> Routing & Switching, TCP/IP, VPNs, Firewall Configuration.</li>
+        </ul>
+
+        <h2>CERTIFICATIONS</h2>
+        <ul>
+            <li>Certified Ethical Hacker (CEH) - EC-Council</li>
+            <li>eLearnSecurity Web Application Penetration Tester eXtreme (eWPTX) - eLearnSecurity</li>
+            <li>eLearnSecurity Mobile Application Penetration Tester (eMAPT) - eLearnSecurity</li>
+        </ul>
+
+        <h2>EDUCATION</h2>
+        <div class="job-header">
+            Dual Bachelor of Science in Cyber Security
+            <span class="date-right">Expected Graduation: 2027</span>
+        </div>
+        <div class="clear"></div>
+        <ul>
+            <li>The Open University - UK</li>
+            <li>Arab Open University - Egypt</li>
+        </ul>
+
+        <h2>LANGUAGES</h2>
+        <div class="job-header">
+            Arabic: Native | English: B2 - Professional Working Proficiency
+        </div>
     </div>
+
 </body>
 </html>
