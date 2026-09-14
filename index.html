@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdelaziz Mohamed | Cybersecurity Portfolio</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Particles.js Library -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    
+    <style>
+        :root {
+            --bg-navy: #0a192f;
+            --bg-light-navy: #112240;
+            --bg-lightest-navy: #233554;
+            --text-slate: #8892b0;
+            --text-light-slate: #ccd6f6;
+            --text-white: #e6f1ff;
+            --accent-teal: #64ffda;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-navy);
+            color: var(--text-slate);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Particles Background */
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            background-color: var(--bg-navy);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4 { color: var(--text-light-slate); font-weight: 600; }
+        
+        .mono-text { font-family: 'Roboto Mono', monospace; }
+        .accent-text { color: var(--accent-teal); }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 40px 0 60px 0;
+            border-bottom: 1px solid var(--bg-lightest-navy);
+            margin-bottom: 50px;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            color: var(--text-white);
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+        }
+
+        header h2 {
+            font-size: 1.2rem;
+            color: var(--accent-teal);
+            margin-bottom: 25px;
+            font-family: 'Roboto Mono', monospace;
+            font-weight: 400;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .contact-links a {
+            color: var(--text-light-slate);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        .contact-links a:hover { color: var(--accent-teal); }
+        .contact-links a::after {
+            content: '';
+            position: absolute;
+            width: 0; height: 1px;
+            bottom: -2px; left: 0;
+            background-color: var(--accent-teal);
+            transition: width 0.3s;
+        }
+        .contact-links a:hover::after { width: 100%; }
+
+        /* Sections */
+        section { margin-bottom: 60px; }
+
+        .section-title {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            color: var(--text-light-slate);
+        }
+
+        .section-title::after {
+            content: "";
+            display: block;
+            height: 1px;
+            width: 200px;
+            background-color: var(--bg-lightest-navy);
+            margin-left: 20px;
+        }
+
+        /* Cards */
+        .card {
+            background-color: rgba(17, 34, 64, 0.85);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--bg-lightest-navy);
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px -15px rgba(2,12,27,0.7);
+            border-color: rgba(100, 255, 218, 0.3);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .card-title {
+            font-size: 1.3rem;
+            color: var(--text-light-slate);
+        }
+
+        .card-subtitle {
+            color: var(--text-slate);
+            font-size: 1rem;
+            margin-top: 5px;
+        }
+
+        .card-date {
+            color: var(--accent-teal);
+            font-size: 0.9rem;
+            font-family: 'Roboto Mono', monospace;
+        }
+
+        ul.task-list {
+            list-style-type: none;
+        }
+
+        ul.task-list li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+        }
+
+        ul.task-list li::before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: var(--accent-teal);
+            font-family: 'Roboto Mono', monospace;
+            font-size: 1.1rem;
+            line-height: 1;
+        }
+
+        /* Certifications List with Logos */
+        .cert-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .cert-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px;
+            background-color: rgba(100, 255, 218, 0.05);
+            border: 1px solid rgba(100, 255, 218, 0.1);
+            border-radius: 8px;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        .cert-item:hover {
+            background-color: rgba(100, 255, 218, 0.1);
+            border-color: rgba(100, 255, 218, 0.3);
+        }
+
+        .cert-logo {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            border-radius: 6px;
+            background-color: #fff;
+            padding: 5px;
+        }
+
+        .cert-info h4 {
+            color: var(--text-light-slate);
+            font-size: 1.05rem;
+            margin-bottom: 3px;
+        }
+
+        .cert-info p {
+            color: var(--accent-teal);
+            font-size: 0.85rem;
+            font-family: 'Roboto Mono', monospace;
+        }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-box {
+            background-color: rgba(17, 34, 64, 0.85);
+            border: 1px solid var(--bg-lightest-navy);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .skill-box h4 {
+            color: var(--text-light-slate);
+            margin-bottom: 15px;
+            font-size: 1.05rem;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag {
+            color: var(--accent-teal);
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.85rem;
+            background-color: rgba(100, 255, 218, 0.1);
+            padding: 5px 12px;
+            border-radius: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .tag:hover {
+            background-color: rgba(100, 255, 218, 0.2);
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            color: var(--accent-teal);
+            background-color: transparent;
+            border: 1px solid var(--accent-teal);
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+
+        .btn:hover {
+            background-color: rgba(100, 255, 218, 0.1);
+        }
+
+        /* Fade-in Animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.2rem; }
+            .card-header { flex-direction: column; }
+            .section-title::after { width: 100px; }
+            .cert-list { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Particles Background Container -->
+    <div id="particles-js"></div>
+
+    <div class="container">
+        
+        <header class="fade-in">
+            <h1>Abdelaziz Mohamed</h1>
+            <h2>Junior Penetration Tester | Ethical Hacker</h2>
+            <div class="contact-links">
+                <a href="mailto:abdelazizmohmed68@gmail.com">abdelazizmohmed68@gmail.com</a>
+                <a href="https://www.linkedin.com/in/abdelaziz-mohamed5" target="_blank">LinkedIn</a>
+                <a href="https://github.com/zezo7amaad" target="_blank">GitHub</a>
+            </div>
+        </header>
+
+        <!-- 1. PROJECTS -->
+        <section class="fade-in">
+            <h3 class="section-title">01. Projects</h3>
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <div class="card-title">Egyxos Scanner</div>
+                        <div class="card-subtitle">Automated Security Reconnaissance & Vulnerability Tool</div>
+                    </div>
+                </div>
+                <ul class="task-list">
+                    <li>Architected a custom Python-based automation tool to streamline the security assessment lifecycle, integrating subdomain enumeration with automated vulnerability discovery.</li>
+                    <li>Engineered modules to detect common web-based vulnerabilities (SQLI, SSRF, XSS) across large attack surfaces, significantly reducing manual reconnaissance time by up to 40% across target domains.</li>
+                    <li>Implemented efficient data parsing to generate actionable vulnerability reports, facilitating rapid triage and remediation for bug bounty engagements.</li>
+                </ul>
+                <a href="https://github.com/zezo7amaad/Egyxos-Scanner" class="btn" target="_blank">View on GitHub</a>
+            </div>
+        </section>
+
+        <!-- 2. EXPERIENCE -->
+        <section class="fade-in">
+            <h3 class="section-title">02. Experience</h3>
+            
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <div class="card-title">Network Security Trainee</div>
+                        <div class="card-subtitle">National Telecommunication Institute (NTI)</div>
+                    </div>
+                    <div class="card-date">Sep 2026 - Oct 2026</div>
+                </div>
+                <ul class="task-list">
+                    <li>Conducted hands-on vulnerability assessments on simulated enterprise network environments, identifying misconfigurations and weaknesses across routers, switches, and endpoint systems.</li>
+                    <li>Configured and tested firewall rule sets and access control policies to enforce network segmentation and restrict unauthorized traffic in alignment with security best practices.</li>
+                    <li>Performed network traffic analysis using Wireshark and Nmap to detect anomalies, map attack surfaces, and support penetration testing exercises on internal infrastructure.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <div class="card-title">Web App Penetration Tester Trainee</div>
+                        <div class="card-subtitle">Arab Open University (AOU)</div>
+                    </div>
+                    <div class="card-date">Dec 2024 - May 2025</div>
+                </div>
+                <ul class="task-list">
+                    <li>Performed security assessments on web applications to identify vulnerabilities including SQL Injection, XSS, and Broken Authentication.</li>
+                    <li>Utilized Burp Suite and manual testing techniques to bypass security controls and document findings.</li>
+                    <li>Collaborated with the development team to provide remediation strategies based on the OWASP framework.</li>
+                    <li>Drafted comprehensive technical remediation reports addressing OWASP Top 10 vulnerabilities (including SQLI, XSS, and IDOR) for development teams.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 3. CERTIFICATIONS -->
+        <section class="fade-in">
+            <h3 class="section-title">03. Certifications</h3>
+            <div class="card">
+                <div class="cert-list">
+                    
+                    <!-- CEH Certification -->
+                    <div class="cert-item">
+                        <img src="CEH.jpg" alt="CEH Logo" class="cert-logo">
+                        <div class="cert-info">
+                            <h4>Certified Ethical Hacker</h4>
+                            <p>EC-Council</p>
+                        </div>
+                    </div>
+
+                    <!-- eWPTX Certification -->
+                    <div class="cert-item">
+                        <img src="ewptx.png" alt="eWPTX Logo" class="cert-logo">
+                        <div class="cert-info">
+                            <h4>eWPTX</h4>
+                            <p>eLearnSecurity</p>
+                        </div>
+                    </div>
+
+                    <!-- eMAPT Certification -->
+                    <div class="cert-item">
+                        <img src="emapt.png" alt="eMAPT Logo" class="cert-logo">
+                        <div class="cert-info">
+                            <h4>eMAPT</h4>
+                            <p>eLearnSecurity</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. TECHNICAL SKILLS -->
+        <section class="fade-in">
+            <h3 class="section-title">04. Technical Skills</h3>
+            <div class="skills-grid">
+                <div class="skill-box">
+                    <h4>Security Tools</h4>
+                    <div class="tags">
+                        <span class="tag">Burp Suite</span>
+                        <span class="tag">Nmap</span>
+                        <span class="tag">Metasploit</span>
+                        <span class="tag">Wireshark</span>
+                        <span class="tag">SQLmap</span>
+                        <span class="tag">Nessus</span>
+                        <span class="tag">Nuclei</span>
+                        <span class="tag">Subfinder</span>
+                    </div>
+                </div>
+                <div class="skill-box">
+                    <h4>Core Competencies</h4>
+                    <div class="tags">
+                        <span class="tag">OWASP Top 10</span>
+                        <span class="tag">Network Security</span>
+                        <span class="tag">Vuln Assessment</span>
+                        <span class="tag">Ethical Hacking</span>
+                        <span class="tag">Linux (Kali)</span>
+                    </div>
+                </div>
+                <div class="skill-box">
+                    <h4>Programming & Networking</h4>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Java</span>
+                        <span class="tag">Bash</span>
+                        <span class="tag">TCP/IP</span>
+                        <span class="tag">VPNs</span>
+                        <span class="tag">Firewalls</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Initialization Scripts -->
+    <script>
+        // 1. Initialize Particles.js
+        particlesJS('particles-js', {
+            "particles": {
+                "number": { "value": 60, "density": { "enable": true, "value_area": 800 } },
+                "color": { "value": "#64ffda" },
+                "shape": { "type": "circle" },
+                "opacity": { "value": 0.3, "random": false },
+                "size": { "value": 2, "random": true },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#64ffda",
+                    "opacity": 0.2,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 1.5,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                }
+            },
+            "interact": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": { "enable": true, "mode": "grab" },
+                    "onclick": { "enable": true, "mode": "push" },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": { "distance": 140, "line_linked": { "opacity": 0.5 } },
+                    "push": { "particles_nb": 3 }
+                }
+            },
+            "retina_detect": true
+        });
+
+        // 2. Scroll Fade-in Animation
+        document.addEventListener("DOMContentLoaded", function() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.fade-in').forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+</body>
+</html>
